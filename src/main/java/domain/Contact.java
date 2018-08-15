@@ -1,5 +1,8 @@
 package domain;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.sql.Update;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +20,7 @@ public class Contact {
               cascade = CascadeType.ALL)
     private Email email;
 
-    @ManyToMany(targetEntity = Group.class,
-                cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(targetEntity = Group.class, cascade = CascadeType.ALL)
     @JoinTable(
             name="Contact_Groups",
             joinColumns=@JoinColumn(name="CONTACT_ID", referencedColumnName="contactId"),
