@@ -15,6 +15,8 @@ public class Email {
 
     // Constructor
 
+    public Email(){}
+
     public Email(String email) {
         this.email = email;
     }

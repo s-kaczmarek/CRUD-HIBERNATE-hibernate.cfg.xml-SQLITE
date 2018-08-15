@@ -12,9 +12,11 @@ public class Contact {
     private int contactId;
     private String firstName;
     private String lastName;
+
     @OneToOne(targetEntity = Email.class,
               cascade = CascadeType.ALL)
     private Email email;
+
     @ManyToMany(targetEntity = Group.class,
                 cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
