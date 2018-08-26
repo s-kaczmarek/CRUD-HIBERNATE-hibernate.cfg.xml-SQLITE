@@ -20,13 +20,6 @@
         </plugins>
     </build>
 
-    <repositories>
-        <repository>
-            <contactId>jitpack.io</contactId>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
@@ -49,7 +42,6 @@
             <artifactId>sqlite-dialect</artifactId>
             <version>master</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
