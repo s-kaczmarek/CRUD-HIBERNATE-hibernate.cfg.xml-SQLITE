@@ -10,11 +10,12 @@ public class TestUtils {
 
         ContactBuilder contactBuilder = new ContactBuilder();
 
-        Contact contact1 = contactBuilder.buildFirstName("Jan").buildLastName("Kowalski").build();
+        Contact contact1 = contactBuilder.buildFirstName("Jon").buildLastName("Doe").build();
 
 
 
         List<Contact> contacts = new ArrayList<Contact>();
+        contacts.add(contact1);
 
         return contacts;
 
