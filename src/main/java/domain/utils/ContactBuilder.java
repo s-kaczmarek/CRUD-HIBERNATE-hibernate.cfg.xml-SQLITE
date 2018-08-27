@@ -14,28 +14,31 @@ public class ContactBuilder {
         this.contact = new Contact();
     }
 
-    public void buildFirstName(String firstName){
+    public ContactBuilder buildFirstName(String firstName){
         contact.setFirstName(firstName);
+        return this;
     }
 
-    public void buildLastName(String lastName){
+    public ContactBuilder buildLastName(String lastName){
         contact.setLastName(lastName);
+        return this;
     }
 
-    public void buildEmail(String email_){
+    public ContactBuilder buildEmail(String email_){
         this.email = new Email(email_);
         contact.setEmail(email);
+        return this;
     }
 
-    public void buildGroups(String ...groups){
+    public ContactBuilder buildGroups(String ...groups){
 
         for(int i=0; i < groups.length; i++){
 
             this.group = new Group(groups[i]);
             contact.getGroups().add(group);
             group.getContacts().add(contact);
-
         }
+        return this;
     }
 
     public Contact build(){

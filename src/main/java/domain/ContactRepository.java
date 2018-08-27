@@ -32,13 +32,14 @@ public class ContactRepository {
 
     }
 
-    public static void listContactById(Integer id){
+    public static Contact listContactById(Integer id){
         Session session = null;
+        Contact contactById = null;
         try {
             session = HibernateUtils.openSession();
             try{
-                Contact contactById = session.find(Contact.class, id);
-                System.out.println(contactById);
+                contactById = session.find(Contact.class, id);
+                //System.out.println(contactById);
             } catch (NullPointerException e){
                 System.out.println("No contact with id: " + id);
             }
@@ -49,6 +50,7 @@ public class ContactRepository {
                 session.close();
             }
         }
+        return contactById;
     }
 
     public static void addNewContact(Contact contact){
@@ -59,11 +61,30 @@ public class ContactRepository {
             session.getTransaction().begin();
             session.saveOrUpdate(contact);
             session.getTransaction().commit();
-        }catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }finally {
             if (session != null && session.isOpen()) {
                 session.close();
+            }
+        }
+    }
+
+    public static void addNewContactsFromList(List<Contact> contacts){
+
+        for(Contact contact : contacts){
+            Session session = null;
+            try {
+                session = HibernateUtils.openSession();
+                session.getTransaction().begin();
+                session.save(contact);
+                session.getTransaction().commit();
+            }catch (Exception e){
+                e.printStackTrace();
+            }finally{
+                if (session != null && session.isOpen()){
+                    session.close();
+                }
             }
         }
     }
@@ -104,6 +125,25 @@ public class ContactRepository {
         }finally{
             if (session != null && session.isOpen()) {
                 session.close();
+            }
+        }
+    }
+
+    public static void deleteContactsFromList(List<Contact> contacts){
+
+        for(Contact contact : contacts){
+            Session session = null;
+            try {
+                session = HibernateUtils.openSession();
+                session.getTransaction().begin();
+                session.remove(contact);
+                session.getTransaction().commit();
+            }catch (Exception e){
+                e.printStackTrace();
+            }finally{
+                if (session != null && session.isOpen()){
+                    session.close();
+                }
             }
         }
     }
