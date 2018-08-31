@@ -12,7 +12,7 @@ public class Group {
     @GeneratedValue
     private int groupId;
     private String groupName;
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "groups")
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "groups" , fetch = FetchType.EAGER)
     private List<Contact> contacts = new ArrayList<Contact>();
 
     // Constructors
@@ -25,11 +25,7 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group{" +
-                "groupId=" + groupId +
-                ", groupName='" + groupName + '\'' +
-                ", contacts=" + contacts +
-                '}';
+        return groupName;
     }
 
     // Getters and Setters

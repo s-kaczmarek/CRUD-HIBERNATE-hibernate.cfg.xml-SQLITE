@@ -2,6 +2,7 @@ package controller;
 
 import domain.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Controller {
@@ -9,13 +10,29 @@ public class Controller {
     Scanner scanner = new Scanner(System.in);
 
     public void getAllContacts(){
-        ContactRepository.listAllContacts();
+
+        List<Contact> allContacts = null;
+        allContacts = ContactRepository.listAllContacts();
+
+        if (allContacts == null) {
+            System.out.println("No employee found . ");
+        } else {
+            for (Contact contact : allContacts) {
+                System.out.println(contact.toString());
+            }
+        }
     }
 
     public void getContactById(){
+        Contact contactFound = null;
         System.out.println("Type contact id:");
         int id = scanner.nextInt();
-        ContactRepository.listContactById(id);
+        contactFound = ContactRepository.listContactById(id);
+        if(contactFound != null){
+            System.out.println(contactFound);
+        }else{
+            System.out.println("No contact with id: " + id);
+        }
     }
 
     public void addNewContact(){

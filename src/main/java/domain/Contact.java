@@ -17,10 +17,10 @@ public class Contact {
     private String lastName;
 
     @OneToOne(targetEntity = Email.class,
-              cascade = CascadeType.ALL)
+              cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Email email;
 
-    @ManyToMany(targetEntity = Group.class, cascade = CascadeType.ALL)
+    @ManyToMany(targetEntity = Group.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name="Contact_Groups",
             joinColumns=@JoinColumn(name="CONTACT_ID", referencedColumnName="contactId"),
@@ -39,11 +39,11 @@ public class Contact {
     @Override
     public String toString() {
         return "Contact{" +
-                "contactId=" + contactId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email=" + email +
-                ", groups=" + groups +
+                "contactId= " + contactId +
+                ", firstName= " + firstName +
+                ", lastName= " + lastName +
+                ", email= " + email.getEmail() +
+                ", groups= " + groups.toString() +
                 '}';
     }
 

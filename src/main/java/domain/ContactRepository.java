@@ -3,24 +3,22 @@ package domain;
 import hibernate.utils.HibernateUtils;
 import org.hibernate.Session;
 
+import javax.persistence.TemporalType;
+import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ContactRepository {
 
-    public static void listAllContacts(){
+    public static List<Contact> listAllContacts(){
+
+        List<Contact> listContact = null;
 
         Session session = null;
         try {
             session = HibernateUtils.openSession();
-            List<Contact> listContact = session.createQuery("SELECT c FROM Contact c").getResultList();
-
-            if (listContact == null) {
-                System.out.println("No employee found . ");
-            } else {
-                for (Contact contact : listContact) {
-                    System.out.println(contact.toString());
-                }
-            }
+            listContact = session.createQuery("SELECT c FROM Contact c").getResultList();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
@@ -28,8 +26,7 @@ public class ContactRepository {
                 session.close();
             }
         }
-
-
+        return listContact;
     }
 
     public static Contact listContactById(Integer id){
@@ -51,6 +48,32 @@ public class ContactRepository {
             }
         }
         return contactById;
+    }
+
+    public static List<Contact> listContactsByCustomQuery(String query, Map<String, String> map){
+        Session session = null;
+        List<Contact> contactsFound = new ArrayList<Contact>();
+        try{
+            session = HibernateUtils.openSession();
+            TypedQuery<Contact> customQuery = session.createQuery(query, Contact.class);
+            for (Map.Entry<String, String> entry : map.entrySet()){
+
+                String keyParameter = entry.getKey();
+                String valueParameter = entry.getValue();
+                customQuery.setParameter(keyParameter, valueParameter);
+
+            }
+
+            contactsFound = customQuery.getResultList();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            if (session != null && session.isOpen()){
+                session.close();
+            }
+        }
+        return contactsFound;
     }
 
     public static void addNewContact(Contact contact){
@@ -114,7 +137,7 @@ public class ContactRepository {
             session = HibernateUtils.openSession();
 
             Contact contactToDelete = session.find(Contact.class, idToDelete);
-            System.out.println(contactToDelete);
+            //System.out.println(contactToDelete);
 
             session.getTransaction().begin();
             session.remove(contactToDelete);
