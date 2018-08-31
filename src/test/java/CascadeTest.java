@@ -36,7 +36,7 @@ public class CascadeTest {
 
         ContactRepository.addNewContact(testContact);
 
-        String customQueryFindJon = "select c from Contact c where c.firstName = :studentName and c.lastName = :lastName";
+        String customQueryFindJon = "select c from Contact c where c.firstName = :firstName and c.lastName = :lastName";
         String key1 = "firstName";
         String value1 = testContact.getFirstName();
         String key2 = "lastName";
@@ -62,55 +62,4 @@ public class CascadeTest {
         ContactRepository.deleteContact(idToDelete);
 
     }
-
-        @Test
-        public void shouldAddCascadeEntitiesOld(){
-
-            String firstName_ = "Jon";
-            String lastName_ = "Doe";
-
-            Contact contact = new Contact(firstName, lastName);
-            Email email = new Email();
-            contact.setEmail(email);
-            Group group1 = new Group();
-            Group group2 = new Group();
-            contact.getGroups().add(group1);
-            contact.getGroups().add(group2);
-            group1.getContacts().add(contact);
-            group2.getContacts().add(contact);
-
-            ContactRepository.addNewContact(contact);
-
-
-            Session session = null;
-
-            try {
-                session = HibernateUtils.openSession();
-
-                String customQueryFindJon = "select c from Contact c where c.firstName = :studentName and c.lastName = :lastName";
-                TypedQuery<Contact> foundJon = session.createQuery(customQueryFindJon, Contact.class);
-                foundJon.setParameter("firstName", firstName_);
-                foundJon.setParameter("lastName", lastName_);
-
-
-                List<Contact> results = foundJon.getResultList();
-
-                Contact jonObject = results.get(0);
-
-                int idToDelete = jonObject.getContactId();
-
-                Assert.assertNotEquals(null, foundJon);
-
-                ContactRepository.deleteContact(idToDelete);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (session != null && session.isOpen()) {
-                    session.close();
-                }
-            }
-
-        }
-
 }
