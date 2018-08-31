@@ -2,6 +2,7 @@ package controller;
 
 import domain.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,11 +12,10 @@ public class Controller {
 
     public void getAllContacts(){
 
-        List<Contact> allContacts = null;
-        allContacts = ContactRepository.listAllContacts();
+        List<Contact> allContacts = ContactRepository.listAllContacts();
 
         if (allContacts == null) {
-            System.out.println("No employee found . ");
+            System.out.println("No contact found. ");
         } else {
             for (Contact contact : allContacts) {
                 System.out.println(contact.toString());
@@ -35,6 +35,7 @@ public class Controller {
         }
     }
 
+    // TODO
     public void addNewContact(){
         System.out.println("Add New Contact");
         System.out.println("===============");
@@ -75,7 +76,6 @@ public class Controller {
         }while(groupRun);
 
         ContactRepository.addNewContact(contact);
-        //EmailRepository.addNewEmail(email);
     }
 
     // TODO
@@ -97,6 +97,7 @@ public class Controller {
 
     }
 
+    // TODO
     public void deleteContact(){
         System.out.println("Delete Contact");
         System.out.println("==============");

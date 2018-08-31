@@ -13,7 +13,7 @@ public class ContactRepository {
 
     public static List<Contact> listAllContacts(){
 
-        List<Contact> listContact = null;
+        List<Contact> listContact = new ArrayList<Contact>();
 
         Session session = null;
         try {
@@ -36,7 +36,6 @@ public class ContactRepository {
             session = HibernateUtils.openSession();
             try{
                 contactById = session.find(Contact.class, id);
-                //System.out.println(contactById);
             } catch (NullPointerException e){
                 System.out.println("No contact with id: " + id);
             }
@@ -135,14 +134,10 @@ public class ContactRepository {
         Session session = null;
         try {
             session = HibernateUtils.openSession();
-
             Contact contactToDelete = session.find(Contact.class, idToDelete);
-            //System.out.println(contactToDelete);
-
             session.getTransaction().begin();
             session.remove(contactToDelete);
             session.getTransaction().commit();
-
         }catch (Exception e){
             e.printStackTrace();
         }finally{
