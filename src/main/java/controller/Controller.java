@@ -1,12 +1,25 @@
 package controller;
 
 import domain.*;
+import domain.utils.comparators.ComparatorContactByName;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Controller {
+
+    static class InnerUtils{
+
+        protected static void contactListIterationLoop(List<Contact> contactsList){
+
+            if (contactsList == null) {
+                System.out.println("No contact found. ");
+            } else {
+                for (Contact contact : contactsList) {
+                    System.out.println(contact.toString());
+                }
+            }
+        }
+    }
 
     Scanner scanner = new Scanner(System.in);
 
@@ -20,6 +33,25 @@ public class Controller {
             for (Contact contact : allContacts) {
                 System.out.println(contact.toString());
             }
+        }
+    }
+
+    public void getAllContactsSortedByName(String param){
+
+        List<Contact> allContacts = ContactRepository.listAllContacts();
+        Comparator comparatorContactByName = new ComparatorContactByName();
+        Collections.sort(allContacts, comparatorContactByName);
+
+        if(param == "asc"){
+
+            InnerUtils.contactListIterationLoop(allContacts);
+            Collections.reverse(allContacts);
+
+        }else if(param == "desc"){
+
+            Collections.reverse(allContacts);
+            InnerUtils.contactListIterationLoop(allContacts);
+
         }
     }
 

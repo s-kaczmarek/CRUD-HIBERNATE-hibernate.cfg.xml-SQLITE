@@ -31,8 +31,27 @@ public class App {
             switch (choice){
 
                 case 1:
-                    controller.getAllContacts();
-                    break;
+                    // SUB MENU
+                    System.out.println("");
+                    System.out.println("MENU");
+                    System.out.println("=====================");
+                    System.out.println("1. Sorted by id");
+                    System.out.println("2. Sort by name asc");
+                    System.out.println("3. Sort by name desc");
+                    System.out.println("=====================");
+                    System.out.println("");
+                    int choiceSort = scanner.nextInt();
+                    switch (choiceSort){
+                        case 1:
+                            controller.getAllContacts();
+                            break;
+                        case 2:
+                            controller.getAllContactsSortedByName("asc");
+                            break;
+                        case 3:
+                            controller.getAllContactsSortedByName("desc");
+                            break;
+                    }break;
                 case 2:
                     controller.getContactById();
                     break;
