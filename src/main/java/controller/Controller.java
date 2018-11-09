@@ -51,7 +51,6 @@ public class Controller {
 
             Collections.reverse(allContacts);
             InnerUtils.contactListIterationLoop(allContacts);
-
         }
     }
 
