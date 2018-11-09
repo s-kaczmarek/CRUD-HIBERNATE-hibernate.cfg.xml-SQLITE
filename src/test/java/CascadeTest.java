@@ -1,16 +1,8 @@
 import domain.Contact;
 import domain.ContactRepository;
-import domain.Email;
-import domain.Group;
 import domain.utils.ContactBuilder;
-import hibernate.utils.HibernateUtils;
-import org.hibernate.Session;
-import org.hibernate.boot.jaxb.SourceType;
 import org.junit.Assert;
 import org.junit.Test;
-
-import javax.persistence.TemporalType;
-import javax.persistence.TypedQuery;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
