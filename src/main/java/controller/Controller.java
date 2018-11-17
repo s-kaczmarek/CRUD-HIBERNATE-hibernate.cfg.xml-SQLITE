@@ -66,7 +66,7 @@ public class Controller {
         }
     }
 
-    // TODO
+    // TODO replace with ContactBuilder
     public void addNewContact(){
         System.out.println("Add New Contact");
         System.out.println("===============");
@@ -139,6 +139,7 @@ public class Controller {
         ContactRepository.deleteContact(idToDelete);
     }
 
+    // TODO
     public void dropTables(){
     }
 }

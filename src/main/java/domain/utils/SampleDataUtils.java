@@ -5,11 +5,16 @@ import domain.ContactRepository;
 import domain.utils.ContactBuilder;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class SampleDataUtils {
+/*
+*   This class is used to generate hardcoded test data
+*
+* */
 
-    private List<Contact> contactsList;
+
+public class SampleDataUtils {
 
     public static List<Contact> generateTestData(){
 
@@ -19,14 +24,14 @@ public class SampleDataUtils {
                 .buildFirstName("Jon")
                 .buildLastName("Doe")
                 .buildEmail("jd@mail.com")
-                .buildGroups("school","family")
+                .buildGroups(new ArrayList<String>(Arrays.asList("Family", "Gym")))
                 .build();
 
         Contact contact2 = contactBuilder
                 .buildFirstName("Jon2")
                 .buildLastName("Doe2")
                 .buildEmail("jd2@mail.com")
-                .buildGroups("work","friends")
+                .buildGroups(new ArrayList<String>(Arrays.asList("Work", "Friends")))
                 .build();
 
         List<Contact> contacts = new ArrayList<Contact>();

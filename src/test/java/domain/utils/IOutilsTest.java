@@ -7,28 +7,28 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static domain.utils.IOutils.loadContactsFromCSV;
+//import static domain.utils.IOutils.loadContactsFromCSV;
 
 public class IOutilsTest {
 
-    private static String filePath = "D:\\CLOUD\\MEGA\\Documents\\#PROGRAMOWANIE\\JAVA\\Brudnopisy\\CRUD-HIBERNATE-hibernate.cfg.xml-SQLITE\\test.csv";
+    private static String filePath = "D:\\CLOUD\\MEGA\\Documents\\#PROGRAMOWANIE\\JAVA\\Brudnopisy\\CRUD-HIBERNATE-hibernate.cfg.xml-SQLITE\\testSampleDataToLoad.csv";
 
-    @Test
-    public void shouldAddAllRecordsToCSV() throws Exception {
-
-        List<Contact> contactsFromDatabase = ContactRepository.listAllContacts();
-
-        if(contactsFromDatabase == null){
-            contactsFromDatabase = SampleDataUtils.generateTestData();
-            ContactRepository.addNewContactsFromList(contactsFromDatabase);
-        }
-
-        IOutils.saveAllContactsToCSV(filePath);
-        List<String> contactsFromCSV = IOutils.loadContactsFromCSV(filePath);
-        System.out.println("List of contacts: " + contactsFromCSV);
-        Assert.assertEquals(contactsFromDatabase, contactsFromCSV);
-
-    }
+//    @Test
+//    public void shouldAddAllRecordsToCSV() throws Exception {
+//
+//        List<Contact> contactsFromDatabase = ContactRepository.listAllContacts();
+//
+//        if(contactsFromDatabase == null){
+//            contactsFromDatabase = SampleDataUtils.generateTestData();
+//            ContactRepository.addNewContactsFromList(contactsFromDatabase);
+//        }
+//
+//        IOutils.saveAllContactsToCSV(filePath);
+//        List<String> contactsFromCSV = IOutils.loadContactsFromCSV(filePath);
+//        System.out.println("List of contacts: " + contactsFromCSV);
+//        Assert.assertEquals(contactsFromDatabase, contactsFromCSV);
+//
+//    }
 
     // TODO
     public static void main(String[] args) {

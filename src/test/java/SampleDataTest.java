@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.Test;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SampleDataTest {
@@ -24,7 +25,6 @@ public class SampleDataTest {
             int contactIdToCheck = contact.getContactId();
             Assert.assertNotNull(ContactRepository.listContactById(contactIdToCheck));
             ContactRepository.deleteContact(contactIdToCheck);
-
 
         }
     }

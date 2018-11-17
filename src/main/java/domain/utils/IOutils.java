@@ -2,7 +2,7 @@ package domain.utils;
 
 import domain.Contact;
 import domain.ContactRepository;
-import domain.utils.helpers.CSVHelper;
+//import domain.utils.helpers.CSVHelper;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -24,12 +24,12 @@ public class IOutils {
 
             //System.out.println(stringListToAdd);
 
-            //String filePathWindows = "D:\\CLOUD\\MEGA\\Documents\\#PROGRAMOWANIE\\JAVA\\Brudnopisy\\CRUD-HIBERNATE-hibernate.cfg.xml-SQLITE\\test.csv";
+            //String filePathWindows = "D:\\CLOUD\\MEGA\\Documents\\#PROGRAMOWANIE\\JAVA\\Brudnopisy\\CRUD-HIBERNATE-hibernate.cfg.xml-SQLITE\\testSampleDataToLoad.csv";
 
             File csvFile = new File(filePath);
             FileOutputStream fos = new FileOutputStream(csvFile, true);
             Writer fw = new OutputStreamWriter(fos, "UTF-8");
-            CSVHelper.writeLine(fw, stringListToAdd);
+            //CSVHelper.writeLine(fw, stringListToAdd);
             fw.flush();
             fw.close();
 
@@ -37,13 +37,13 @@ public class IOutils {
         }
     }
 
-    public static List<String> loadContactsFromCSV(String filePath) throws Exception {
-
-        List<String> allStringsFromCSV;
-        Reader fr = new FileReader(filePath);
-        allStringsFromCSV = CSVHelper.parseLine(fr);
-
-        return allStringsFromCSV;
-
-    }
+//    public static List<String> loadContactsFromCSV(String filePath) throws Exception {
+//
+//        List<String> allStringsFromCSV;
+//        Reader fr = new FileReader(filePath);
+//        //allStringsFromCSV = CSVHelper.parseLine(fr);
+//
+//        return allStringsFromCSV;
+//
+//    }
 }

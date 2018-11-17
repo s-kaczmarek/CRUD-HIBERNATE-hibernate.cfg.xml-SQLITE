@@ -1,8 +1,12 @@
 package domain.utils;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import domain.Contact;
 import domain.Email;
 import domain.Group;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class ContactBuilder {
 
@@ -30,11 +34,22 @@ public class ContactBuilder {
         return this;
     }
 
-    public ContactBuilder buildGroups(String ...groups){
+//    public ContactBuilder buildGroups(String ...groups){
+//
+//        for(int i=0; i < groups.length; i++){
+//
+//            this.group = new Group(groups[i]);
+//            contact.getGroups().add(group);
+//            group.getContacts().add(contact);
+//        }
+//        return this;
+//    }
 
-        for(int i=0; i < groups.length; i++){
+    // TODO consider overloading previous (commented above) method
+    public ContactBuilder buildGroups(ArrayList<String> groups){
 
-            this.group = new Group(groups[i]);
+        for(String group_ : groups){
+            this.group = new Group(group_);
             contact.getGroups().add(group);
             group.getContacts().add(contact);
         }
