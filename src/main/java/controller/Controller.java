@@ -1,11 +1,16 @@
 package controller;
 
 import domain.*;
+import domain.utils.ContactBuilder;
 import domain.utils.comparators.ComparatorContactByName;
+import view.View;
 
 import java.util.*;
 
 public class Controller {
+
+    Scanner scanner = new Scanner(System.in);
+    View view = new View();
 
     static class InnerUtils{
 
@@ -19,9 +24,27 @@ public class Controller {
                 }
             }
         }
-    }
 
-    Scanner scanner = new Scanner(System.in);
+        private static Contact createContact(List<List<String>> basicDataAndGroupsList){
+
+            ContactBuilder contactBuilder = new ContactBuilder();
+
+            String firstName = basicDataAndGroupsList.get(0).get(0);
+            String lastName = basicDataAndGroupsList.get(0).get(1);
+            String email_ = basicDataAndGroupsList.get(0).get(2);
+
+            List<String> groups = basicDataAndGroupsList.get(1);
+
+            Contact contact = contactBuilder
+                    .buildFirstName(firstName)
+                    .buildLastName(lastName)
+                    .buildEmail(email_)
+                    .buildGroups((ArrayList<String>) groups)
+                    .build();
+
+            return contact;
+        }
+    }
 
     public void getAllContacts(){
 
@@ -66,47 +89,8 @@ public class Controller {
         }
     }
 
-    // TODO replace with ContactBuilder
     public void addNewContact(){
-        System.out.println("Add New Contact");
-        System.out.println("===============");
-        System.out.println("");
-
-        System.out.println("First Name: ");
-        String firstName = scanner.next();
-        System.out.println("Last Name: ");
-        String lastName = scanner.next();
-
-        Contact contact = new Contact(firstName, lastName);
-
-        System.out.println("Email: ");
-        String email_ = scanner.next();
-
-        Email email = new Email(email_);
-        contact.setEmail(email);
-
-        boolean groupRun = true;
-        do{
-            System.out.println("Group name: ");
-            String groupName = scanner.next();
-            Group group = new Group(groupName);
-            contact.getGroups().add(group);
-            group.getContacts().add(contact);
-            //GroupRepository.addNewGroup(group);
-
-            System.out.println("Would you like to add another group? y/n");
-            String choice = scanner.next();
-            switch (choice.charAt(0)){
-                case 'y':
-                    break;
-                case 'n':
-                    groupRun = false;
-                    break;
-            }
-
-        }while(groupRun);
-
-        ContactRepository.addNewContact(contact);
+        ContactRepository.addNewContact(Controller.InnerUtils.createContact(view.newContactCreator()));
     }
 
     // TODO
