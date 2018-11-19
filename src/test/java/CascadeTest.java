@@ -18,11 +18,9 @@ public class CascadeTest {
     @Test
     public void shouldAddCascadeEntities() {
 
-        ContactBuilder contactBuilder = new ContactBuilder();
-
         Contact jonObject = null;
 
-        Contact testContact = contactBuilder
+        Contact testContact = new ContactBuilder()
                 .buildFirstName(firstName)
                 .buildLastName(lastName)
                 .buildEmail(email)

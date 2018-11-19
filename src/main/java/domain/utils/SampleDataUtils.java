@@ -18,16 +18,14 @@ public class SampleDataUtils {
 
     public static List<Contact> generateTestData(){
 
-        ContactBuilder contactBuilder = new ContactBuilder();
-
-        Contact contact1 = contactBuilder
-                .buildFirstName("Jon")
-                .buildLastName("Doe")
+        Contact contact1 = new ContactBuilder()
+                .buildFirstName("Jon1")
+                .buildLastName("Doe1")
                 .buildEmail("jd@mail.com")
                 .buildGroups(new ArrayList<String>(Arrays.asList("Family", "Gym")))
                 .build();
 
-        Contact contact2 = contactBuilder
+        Contact contact2 = new ContactBuilder()
                 .buildFirstName("Jon2")
                 .buildLastName("Doe2")
                 .buildEmail("jd2@mail.com")
