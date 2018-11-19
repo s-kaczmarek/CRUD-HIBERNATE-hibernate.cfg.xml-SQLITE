@@ -29,13 +29,11 @@ public class CsvUtils {
         }
     }
 
-    // TODO change to return object and make proper test
-    public void mapCSVfileToObjectList(String pathToFile){
+    public List<Contact> mapCSVfileToObjectList(String pathToFile){
 
-        ContactBuilder contactBuilder = new ContactBuilder();
+        List<Contact> parsedContactsList = new ArrayList<Contact>();
 
         try{
-
             CSVReader csvReader = new CSVReader(new FileReader(pathToFile));
             String[]nextLine;
             while((nextLine = csvReader.readNext()) != null){
@@ -57,24 +55,25 @@ public class CsvUtils {
                         String temp = gr[i];
                         String tempReplaced = temp.replaceAll(pattern,"");
                         formattedGroups.add(tempReplaced);
-                        //
-                        System.out.println(formattedGroups);
                     }
 
-                    Contact testContact = contactBuilder
+                    Contact parsedContact = new ContactBuilder()
                             .buildFirstName(firstName)
                             .buildLastName(lastName)
                             .buildEmail(email)
                             .buildGroups((ArrayList<String>) formattedGroups)
                             .build();
 
-                    System.out.println(testContact);
-
+                    parsedContactsList.add(parsedContact);
                 }
             }
-
         }catch (Exception e){
             System.out.println(e);
         }
+        return parsedContactsList;
+    }
+
+    public void exportAllContactsToCSV(String path){
+        //TODO
     }
 }

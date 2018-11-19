@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a430cf4-cf9d-4f96-800f-1572186a5f15" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/domain/ContactRepositoryTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE.iml" afterPath="$PROJECT_DIR$/CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE.iml" />
       <change beforePath="$PROJECT_DIR$/mydb.db" afterPath="$PROJECT_DIR$/mydb.db" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/utils/SampleDataUtils.java" afterPath="$PROJECT_DIR$/src/main/java/domain/utils/SampleDataUtils.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CascadeTest.java" afterPath="$PROJECT_DIR$/src/test/java/CascadeTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SampleDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/SampleDataTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java" afterPath="$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/utils/csv/CsvUtilsTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/utils/csv/CsvUtilsTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/utils/SampleDataUtils.class" afterPath="$PROJECT_DIR$/target/classes/domain/utils/SampleDataUtils.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CascadeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/CascadeTest.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SampleDataTest.class" afterPath="$PROJECT_DIR$/target/test-classes/SampleDataTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,6 +18,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CRUDHIBERNATEhibernate_cfg_xmlSQLITE$CascadeTest.coverage" NAME="CascadeTest Coverage Results" MODIFIED="1535738880033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CRUDHIBERNATEhibernate_cfg_xmlSQLITE$SampleDataTest.coverage" NAME="SampleDataTest Coverage Results" MODIFIED="1542588219369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -35,8 +29,6 @@
               <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#321#330#0" expanded="true" />
-                <element signature="e#2820#2829#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,9 +37,23 @@
       <file leaf-file-name="CsvUtilsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/io/utils/csv/CsvUtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CsvUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="76" column="14" lean-forward="false" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+              <folding>
+                <element signature="e#821#830#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,8 +61,8 @@
       <file leaf-file-name="CascadeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CascadeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="117" />
+            <state relative-caret-position="765">
+              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -65,8 +71,8 @@
       <file leaf-file-name="SampleDataTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SampleDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            <state relative-caret-position="289">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#995#1004#0" expanded="true" />
                 <element signature="e#2131#2139#0" expanded="true" />
@@ -116,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/test/java/domain/utils/IOutilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/utils/ContactBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testSampleDataToLoad.csv" />
         <option value="$PROJECT_DIR$/src/main/java/view/View.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
@@ -126,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/test/java/domain/ContactRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/utils/SampleDataUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/SampleDataTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/io/utils/csv/CsvUtilsTest.java" />
       </list>
     </option>
@@ -176,9 +182,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,6 +277,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CRUDHIBERNATEhibernate_cfg_xmlSQLITE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CRUD-HIBERNATE-hibernate.cfg.xml-SQLITE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="csv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,7 +299,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,13 +326,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SampleDataTest">
+  <component name="RunManager" selected="JUnit.SampleDataTest.shouldAddSampleDataToDataBase">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="CsvUtilsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="io.utils.csv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="io.utils.csv.CsvUtilsTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -333,40 +367,15 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="CascadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CascadeTest" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ContactRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="domain" />
-      <option name="MAIN_CLASS_NAME" value="domain.ContactRepositoryTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -403,15 +412,20 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="SampleDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="io.utils.csv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SampleDataTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="io.utils.csv" />
+      <option name="MAIN_CLASS_NAME" value="io.utils.csv.CsvUtilsTest" />
+      <option name="METHOD_NAME" value="shouldMapDataFromTestCSVtoPOJOs" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -504,19 +518,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.SampleDataTest.shouldAddSampleDataToDataBase" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.ContactRepositoryTest.shouldAddContactsFromListToDatabase" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ContactRepositoryTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CascadeTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SampleDataTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CsvUtilsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SampleDataTest.shouldAddSampleDataToDataBase" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SampleDataTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SampleDataTest.shouldAddSampleDataToDataBase" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CascadeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ContactRepositoryTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ContactRepositoryTest.shouldAddContactsFromListToDatabase" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SampleDataTest.shouldAddSampleDataToDataBase" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CsvUtilsTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ContactRepositoryTest.shouldAddContactsFromListToDatabase" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.All in CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" />
       </list>
     </recent_temporary>
   </component>
@@ -537,23 +551,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CascadeTest - 2018.11.19 at 01h 43m 18s.xml">
-      <configuration name="CascadeTest" configurationId="JUnit" />
+    <history-entry file="All_in_CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE - 2018.11.19 at 11h 37m 03s.xml">
+      <configuration name="All in CRUD-HIBERNATE-hibernate_cfg_xml-SQLITE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactRepositoryTest - 2018.11.19 at 01h 42m 06s.xml">
-      <configuration name="ContactRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContactRepositoryTest_shouldAddContactsFromListToDatabase - 2018.11.18 at 22h 47m 32s.xml">
+    <history-entry file="ContactRepositoryTest_shouldAddContactsFromListToDatabase - 2018.11.19 at 11h 38m 06s.xml">
       <configuration name="ContactRepositoryTest.shouldAddContactsFromListToDatabase" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactRepositoryTest_shouldAddContactsFromListToDatabase - 2018.11.19 at 01h 37m 50s.xml">
-      <configuration name="ContactRepositoryTest.shouldAddContactsFromListToDatabase" configurationId="JUnit" />
+    <history-entry file="CsvUtilsTest_shouldMapDataFromTestCSVtoPOJOs - 2018.11.19 at 14h 29m 45s.xml">
+      <configuration name="CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SampleDataTest_shouldAddSampleDataToDataBase - 2018.11.18 at 23h 26m 19s.xml">
-      <configuration name="SampleDataTest.shouldAddSampleDataToDataBase" configurationId="JUnit" />
+    <history-entry file="CsvUtilsTest_shouldMapDataFromTestCSVtoPOJOs - 2018.11.19 at 14h 31m 03s.xml">
+      <configuration name="CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SampleDataTest_shouldAddSampleDataToDataBase - 2018.11.18 at 23h 30m 13s.xml">
-      <configuration name="SampleDataTest.shouldAddSampleDataToDataBase" configurationId="JUnit" />
+    <history-entry file="CsvUtilsTest_shouldMapDataFromTestCSVtoPOJOs - 2018.11.19 at 14h 31m 50s.xml">
+      <configuration name="CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CsvUtilsTest_shouldMapDataFromTestCSVtoPOJOs - 2018.11.19 at 14h 32m 44s.xml">
+      <configuration name="CsvUtilsTest.shouldMapDataFromTestCSVtoPOJOs" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SampleDataTest_shouldAddSampleDataToDataBase - 2018.11.18 at 23h 31m 31s.xml">
       <configuration name="SampleDataTest.shouldAddSampleDataToDataBase" configurationId="JUnit" />
@@ -584,7 +598,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.4874372" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -601,9 +615,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19324325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24864864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22277936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28648648" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31621623" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22206303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -612,7 +626,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5125628" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -844,9 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,17 +922,6 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1709#1717#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -992,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/utils/ContactBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="365">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1004,32 +1004,42 @@
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#321#330#0" expanded="true" />
-            <element signature="e#2820#2829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CascadeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/utils/csv/CsvUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="76" column="14" lean-forward="false" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+          <folding>
+            <element signature="e#821#830#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/io/utils/csv/CsvUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CascadeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="117" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SampleDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+        <state relative-caret-position="289">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#995#1004#0" expanded="true" />
             <element signature="e#2131#2139#0" expanded="true" />
