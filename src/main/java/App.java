@@ -1,5 +1,6 @@
 import controller.Controller;
 import domain.*;
+import hibernate.utils.HibernateUtils;
 
 import java.util.Scanner;
 
@@ -75,5 +76,7 @@ public class App {
                     break;
             }
         }while(run);
+
+        HibernateUtils.closeSession();
     }
 }
